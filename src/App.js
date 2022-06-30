@@ -59,9 +59,14 @@ function App() {
   return (
     <div>
       <h1>Iron Contacts</h1>
+      <h2>Currently Viewing {contacts.length}</h2>
       <button onClick={addContact}>Add random contact</button>
-      <button onClick={sortName}>Sort by Name</button>
-      <button onClick={sortPopularity}>Sort by Popularity</button>
+      <button onClick={sortName}>
+        Sort by Name({ascending ? "ascending" : "descending"})
+      </button>
+      <button onClick={sortPopularity}>
+        Sort by Popularity({ascending ? "ascending" : "descending"})
+      </button>
       <table>
         <tr>
           <th>Image</th>
